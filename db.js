@@ -11,7 +11,7 @@ const messages = [
     },
 ];
 
-const addMessage = (text, user) => {
+const addNewMessage = (text, user) => {
     messages.push({
         text,
         user,
@@ -19,4 +19,4 @@ const addMessage = (text, user) => {
     });
 };
 
-module.exports = { messages, addMessage };
+module.exports = { messages, addNewMessage };
