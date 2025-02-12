@@ -15,7 +15,7 @@ const { Router } = require('express');
 const indexRouter = Router();
 
 indexRouter.get('/', (req, res) => {
-    res.send('hello world!');
+    res.render('../views/index.ejs', { messages: messages });
 });
 
 module.exports = indexRouter;

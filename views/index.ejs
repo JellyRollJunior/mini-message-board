@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>mini-message-board</title>
+  </head>
+  <body>
+    <h1>Mini Message board</h1>
+    <h2>Messages</h2>
+    <ul>
+      <% messages.forEach((message) => { %>
+      <li>
+        <div>Sender: <%= message.user %></div>
+        <div>Date: <%= message.added.toString() %></div>
+        <div>Message: <%= message.text %></div>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
