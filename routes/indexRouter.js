@@ -1,4 +1,4 @@
-const messages = require('../db.js');
+const { messages } = require('../db.js');
 const { Router } = require('express');
 const indexRouter = Router();
 
