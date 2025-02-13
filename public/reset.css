@@ -37,3 +37,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+ul, li {
+  list-style-type: none;
+}
