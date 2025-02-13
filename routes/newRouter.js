@@ -3,7 +3,7 @@ const newRouter = Router();
 const { addNewMessage } = require('../controllers/newController.js');
 
 newRouter.get('/', (req, res) => {
-    res.render('../views/form.ejs');
+    res.render('form');
 });
 
 newRouter.post('/', addNewMessage);

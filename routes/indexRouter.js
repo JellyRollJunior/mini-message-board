@@ -3,7 +3,7 @@ const { Router } = require('express');
 const indexRouter = Router();
 
 indexRouter.get('/', (req, res) => {
-    res.render('../views/index.ejs', { messages: messages });
+    res.render('index', { messages: messages });
 });
 
 module.exports = indexRouter;
