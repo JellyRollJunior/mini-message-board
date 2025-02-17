@@ -11,4 +11,15 @@ const getMessageById = async (request, response) => {
     response.render('message', { message });
 };
 
-module.exports = { getMessages, getMessageById };
+const getNewMessage = async (request, response) => {
+    response.render('form');
+};
+
+const postNewMessage = async (request, response) => {
+    const username = request.body.messageUser;
+    const text = request.body.messageText;
+    await db.insertMessage(username, text);
+    response.redirect('/');
+};
+
+module.exports = { getMessages, getMessageById, getNewMessage, postNewMessage };

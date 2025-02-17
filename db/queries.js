@@ -14,4 +14,9 @@ const getMessageById = async (id) => {
     return rows[0];
 }
 
-module.exports = { getMessages, getMessageById };
+const insertMessage = async (username, text) => {
+    const query = 'INSERT INTO messages (username, text) VALUES ($1, $2)';
+    await pool.query(query, [username, text]);
+}
+
+module.exports = { getMessages, getMessageById, insertMessage };
