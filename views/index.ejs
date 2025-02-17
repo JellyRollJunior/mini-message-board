@@ -8,12 +8,12 @@
     <a href="/new"><button>Add new message</button></a>
     <h2>Messages</h2>
     <ul>
-      <% messages.forEach((message, index) => { %>
+      <% messages.forEach((message) => { %>
       <li>
         <div>Sender: <%= message.username %></div>
         <div>Date: <%= message.send_date.toString() %></div>
         <div>Message: <%= message.text %></div>
-        <a href="/message/<%= index %>"><button>Open</button></a>
+        <a href="/message/<%= message.id %>"><button>Open</button></a>
       </li>
       <% }) %>
     </ul>

@@ -5,4 +5,10 @@ const getMessages = async (request, response) => {
     response.render('index', { messages });
 };
 
-module.exports = { getMessages };
+const getMessageById = async (request, response) => {
+    const { messageId } = request.params;
+    const message = await db.getMessageById(messageId);
+    response.render('message', { message });
+};
+
+module.exports = { getMessages, getMessageById };
